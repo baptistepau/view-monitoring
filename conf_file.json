@@ -1,0 +1,10 @@
+{
+  "listeURL" : [
+    "https://odoo.st-jo.com/web#action=183&active_id=1&model=helpdesk.ticket&view_type=kanban&cids=1&menu_id=131",
+    "https://google.com",
+    "https://youtube.com"],
+  "emplacementFirefox": "C:\\Program Files\\Mozilla Firefox ESR\\firefox.exe",
+  "emplacmentDriver": "driver/geckodriver.exe",
+  "emplacementProfile": "C:\\Users\\bpauchet\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\0s0mzheo.default-esr",
+  "time": 10
+}
