@@ -62,4 +62,5 @@ class FirefoxControl:
             tab_count = len(self.__driver.window_handles)
             for i in range(tab_count):
                 self.__driver.switch_to.window(self.__driver.window_handles[i])
+                self.__driver.refresh()
                 time.sleep(15)
