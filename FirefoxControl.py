@@ -61,6 +61,10 @@ class FirefoxControl:
         while self.__daemonBoucle == 1:
             tab_count = len(self.__driver.window_handles)
             for i in range(tab_count):
-                self.__driver.switch_to.window(self.__driver.window_handles[i])
-                self.__driver.refresh()
+                try :
+                    self.__driver.switch_to.window(self.__driver.window_handles[i])
+                    self.__driver.refresh()
+                except:
+                    print("Erreur de rafraichissement de l'onglet numero : ", i)
+
                 time.sleep(15)
