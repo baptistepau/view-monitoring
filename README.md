@@ -1,56 +1,63 @@
-# Monitoring Service Infomatique de ST-JO
+# Projet View Monitoring
 
-# Technologie utilisée 
+# Technologie utilisée  
 - Python
 - Selenium
 - Firefox ESR 
 
 # Installation 
-- Installer Python 3.8 ou supérieur
+- De préférence, installer la version 3.13 dans un venv
+
+	[Lien Python 3.13.3 pour Windows](https://www.python.org/ftp/python/3.13.3/python-3.13.3-amd64.exe)
+	
+	Python 3.13 sur Debian 12
+	```bash
+	sudo apt install python3.13 python3.13-venv python3.13-dev
+	```
 - Installer Firefox ESR
-- Installer les dependance sur projet avec la commande suivante:
+-Installer les dépendances sur le projet avec la commande suivante :
     ```bash
     pip install -r requirements.txt
     ```
-- Cree un script bash sur linux ou bat sur windows pour lancer le Fichier `main.py` avec la commande suivante:
+- Crée un script bash sur Linux ou un script bat sur Windows pour lancer le fichier main.py avec la commande suivante :
     ```bash
     python main.py
     ```
-Ne pas oublier de bien lancer le programme dans le dossier on se trouve le projet
+Ne pas oublier de bien lancer le programme dans le dossier où se trouve le projet.
 
 # Configuration 
 
-Pour configurere le programme, il faut editer le fichier `conf_file.json` en modifiant les champs suivants:
+Pour configurer le programme, il faut éditer le fichier  `conf_file.json`  en modifiant les champs suivants :
 
 ---
 ```json 
 "listeURL":["",""]
 ```
-Correspond au liste des URL a surveiller
+Correspond à la liste des URL à surveiller.
 
 ---
 ```json
 "emplacementFirefox":""
 ```
-Correspond a l'emplacmente de l'executable de Firefox ESR dans le cas de windows par default il se trouve dans `"C:\\Program Files\\Mozilla Firefox ESR\\firefox.exe"`
+Correspond à l'emplacement de l’exécutable de Firefox ESR. Dans le cas de Windows, par défaut, il se trouve dans : `"C:\\Program Files\\Mozilla Firefox ESR\\firefox.exe"`
 
 ---
 ```json
 "emplacmentDriver": ""
 ```
 
-Correspond a l'emplacement du driver geckodriver
+Correspond à l'emplacement du driver geckodriver, qui est fourni dans le dépôt de logiciels. (Pourra un jour demander une mise à jour.)
 
 ---
 ```json
 "emplacementProfile": ""
 ```
-Correspond a l'emplacement du profile de Firefox qui est obligatoire si vous utiliser des site qui on une connection avec user et mdp.
+Correspond à l'emplacement du profil de Firefox, qui est obligatoire si vous utilisez des sites nécessitant une connexion avec un utilisateur et un mot de passe.
 
-Le profile de Firefox se trouve dans le dossier `C:\Users\<username>\AppData\Roaming\Mozilla\Firefox\Profiles`
+Le profil de Firefox se trouve dans le dossier : `C:\Users\<username>\AppData\Roaming\Mozilla\Firefox\Profiles`
 
 ---
 ```json
  "time": 10
 ```
-Correspond a la frequence ou le programme change d'onglets 
+Correspond à la fréquence à laquelle le programme change d'onglet.
